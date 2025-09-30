@@ -33,7 +33,7 @@ const Login = () => {
       const readable_result = await result.json()
       const { token } = readable_result
       localStorage.setItem("jwt_token", token)
-      navigate("/dashboard")
+      navigate("/")
     } else {
       setErrorVisible(true)
       setError(`Error : ${result.statusText}`)
